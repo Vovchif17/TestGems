@@ -5,8 +5,9 @@ html
     title
       = yield(:title)
       | | Ruby on Rails Tutorial Sample App
-    h1 Sample App
+    h1 TestGems
     p
       | This is the home page for the
       a href="https://www.railstutorial.org/"  Ruby on Rails Tutorial
-      | sample application.
+      |  sample application.
+      = link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary"
