@@ -1,18 +1,11 @@
-header.navbar.navbar-fixed-top.navbar-inverse
-  .container
-    = link_to "test app", "#", id: "logo"
-    nav
-      ul.nav.navbar-nav.navbar-right
-        li = link_to "Help", help_path
-        li = link_to "Home", root_path
-        li
-          - if user_signed_in?
-            li#fat-menu.dropdown
-              a.dropdown-toggle href="#" data-toggle="dropdown"
-              ul.dropdown-menu
-                li = link_to "Profile"
-                li = link_to "Settings", edit_user_registration_path(current_user)
-                li.divider
-                li = link_to "Sign out", destroy_user_session_path, method: :delete
-          - else
-            li = link_to "Sign in", new_user_session_path
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to "Testgems", root_path, class: "navbar-brand"
+  button.navbar-toggler[type="button" data-toggle="collapse" data-target="#burgerMenu" aria-controls="burgerMenu" aria-expanded="false" aria-label="Toggle navigation"]
+    span.navbar-toggler-icon
+  #burgerMenu.collapse.navbar-collapse.d-flex.justify-content-end
+    - if user_signed_in?
+      = link_to "Log out", destroy_user_session_path, method: :delete
+    - else
+      = link_to "Sign in", new_user_session_path 
+      | &nbsp;|&nbsp;
+      = link_to "Sign up", new_user_registration_path 
