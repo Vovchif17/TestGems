@@ -18,7 +18,6 @@ gem 'devise'
 gem "slim-rails"
 gem 'kaminari'
 gem 'simple_form'
-gem 'will_paginate'
 
 group :development, :test do
   gem 'database_cleaner-active_record'

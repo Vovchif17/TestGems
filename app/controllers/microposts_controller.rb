@@ -1,11 +1,12 @@
 class MicropostsController < ApplicationController
-  
+  def index
+    @microposts = Micropost.all
+  end
+
   def create 
     @microposts = Micropost.new 
   end 
 
   def show
-    @user = current_user
-    @microposts = current_user.microposts
   end
 end

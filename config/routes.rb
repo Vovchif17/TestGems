@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get '/about',   to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
-  get '/microposts', to: 'microposts#show'
   resource :users, only: [:show]
-  resource :microposts, only: [:create, :destroy, :show]
+  resource :microposts, only: [:index, :create, :destroy, :show]
 end
