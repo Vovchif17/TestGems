@@ -18,12 +18,10 @@ gem 'devise'
 gem "slim-rails"
 gem 'kaminari'
 gem 'simple_form'
-
-group :test do
-  gem 'database_cleaner-active_record'
-end
+gem 'will_paginate'
 
 group :development, :test do
+  gem 'database_cleaner-active_record'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'rails-controller-testing'
