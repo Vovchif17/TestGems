@@ -1,0 +1,10 @@
+- if @user.microposts.any?
+  h3
+    button.button
+      |  Create new Micropost 
+    - @microposts.create
+    |  Micropost 
+    - @user.microposts.count
+  ol.microposts
+    = render @microposts
+  /= will_paginate @microposts
